@@ -1,6 +1,6 @@
-package company;
+package demo.company;
 
-public class Employee implements DeveloperContract {
+public class Employee implements DeveloperContract, ManagerContract {
 
 
     private String name;
@@ -41,5 +41,15 @@ public class Employee implements DeveloperContract {
     @Override
     public void writeDocumentation() {
         System.out.println(name + "write documentation as an employee");
+    }
+
+    @Override
+    public void evaluatePeople() {
+        System.out.println(name + "evaluates people");
+    }
+
+    @Override
+    public void delegateTaks() {
+        System.out.println(name + "delegates tasks");
     }
 }

@@ -1,4 +1,4 @@
-package company;
+package demo.company;
 
 public interface DeveloperContract {
 

@@ -1,4 +1,4 @@
-package game;
+package demo.game;
 
 public class Wizard extends PlayerCharacter {
 
@@ -20,6 +20,12 @@ public class Wizard extends PlayerCharacter {
     @Override
     public void attack(){
         System.out.println("atacking with power: " + power);
+    }
+
+    @Override
+    public void levelUp() {
+        power += 50;
+        setLevel(getLevel()+1);
     }
 
 

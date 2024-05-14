@@ -1,4 +1,4 @@
-package game;
+package demo.game;
 
 public class Archer extends PlayerCharacter{
 
@@ -22,5 +22,12 @@ public class Archer extends PlayerCharacter{
     public void attack(){
         numberOfArrows--;
         System.out.println("number of arrows left "+ numberOfArrows);
+    }
+
+    @Override
+    public void levelUp() {
+        numberOfArrows+=100;
+        setAge(getAge() +1);
+        setLevel(getLevel() + 1);
     }
 }

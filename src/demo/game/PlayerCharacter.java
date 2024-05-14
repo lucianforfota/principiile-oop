@@ -1,14 +1,24 @@
-package game;
+package demo.game;
 
-public abstract class PlayerCharacter {
+public abstract class PlayerCharacter implements Playable{
 
     private String name;
     private int age;
 
+    private int level;
 
     public PlayerCharacter(String name, int age) {
         this.name = name;
         this.age = age;
+        this.level = 1;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 
     public String getName() {
@@ -36,5 +46,7 @@ public abstract class PlayerCharacter {
     }
 
     public abstract void attack();
+
+
 
 }

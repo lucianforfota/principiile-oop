@@ -1,12 +1,12 @@
-package game;
+package demo.game;
 
 public class Game {
 
     public static void main(String[] args) {
 //        Archer archer = new Archer("Legolas", 31, 100);
 //        Wizard wizard = new Wizard("Gandalf", 75, 1000);
-//        System.out.println(wizard instanceof game.Wizard);
-//        System.out.println(wizard instanceof game.PlayerCharacter);
+//        System.out.println(wizard instanceof Wizard);
+//        System.out.println(wizard instanceof PlayerCharacter);
 //        System.out.println(archer instanceof Object);
 
 
@@ -17,6 +17,11 @@ public class Game {
         player2.attack();
 
         doAllPlayerActions(player);
+
+        player.levelUp();
+        player2.levelUp();
+
+
 
     }
 
