@@ -6,6 +6,8 @@ public class Main {
 
         SmartKitchen kitchen = new SmartKitchen();
 
+        //test
+
 //      varianta 1
 //      decomenteaza liniile 10-16 (si ruleaza aplicatia) pentru a observa prima varianta in care interactionezi cu obiectele din aplicatie
 //        kitchen.getDishWasher().setHasWorkToDo(true);
