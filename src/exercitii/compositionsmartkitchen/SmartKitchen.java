@@ -6,10 +6,13 @@ public class SmartKitchen {
     private Refrigerator iceBox;
     private DishWasher dishWasher;
 
-    public SmartKitchen() {
-        brewMaster = new CoffeeMaker();
-        iceBox = new Refrigerator();
-        dishWasher = new DishWasher();
+
+
+    public SmartKitchen(CoffeeMaker coffeeMaker, Refrigerator refrigerator, DishWasher dishWasher) {
+        this.brewMaster = coffeeMaker;
+        this.iceBox = refrigerator;
+        this.dishWasher = dishWasher;
+
     }
 
     public CoffeeMaker getBrewMaster() {
@@ -24,8 +27,19 @@ public class SmartKitchen {
         return dishWasher;
     }
 
-    public void setKitchenState(boolean coffeeFlag, boolean fridgeFlag,
-                                boolean dishWasherFlag) {
+    public void setBrewMaster(CoffeeMaker brewMaster) {
+        this.brewMaster = brewMaster;
+    }
+
+    public void setIceBox(Refrigerator iceBox) {
+        this.iceBox = iceBox;
+    }
+
+    public void setDishWasher(DishWasher dishWasher) {
+        this.dishWasher = dishWasher;
+    }
+
+    public void setKitchenState(boolean coffeeFlag, boolean fridgeFlag, boolean dishWasherFlag) {
 
         brewMaster.setHasWorkToDo(coffeeFlag);
         iceBox.setHasWorkToDo(fridgeFlag);

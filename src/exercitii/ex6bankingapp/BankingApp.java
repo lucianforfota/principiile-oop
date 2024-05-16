@@ -48,5 +48,15 @@ public  class BankingApp {
 
     public static void main(String[] args) {
         //instantiez persoane ca sa testez functionalitatile
+
+       /*StudentAccount sa = new StudentAccount("ROBTRL2324",300);
+       StudentAccount s2 = new StudentAccount("ROBTRL2324",500);
+       StudentAccount s2 = new SpendingAccount("ROBTRL2324",500);
+       sa.deposit(700);
+
+       sa.withdraw(400);
+
+       s2.deposit(400);*/
+
     }
 }
