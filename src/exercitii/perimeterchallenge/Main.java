@@ -59,20 +59,69 @@ public class Main {
 
 
 
+        //varianta 2
+
+        //totatlPerim este initial 0
+        //calculez distanta de la P1 la P2 (currDist = 4)
+        //totalPerim devine totalPerim + currDist
+        //calculez distanta de la P2 la P3 (currDist = 5)
+        //totalPerim devine totalPerim + currDist
+        //calculez disnta de la P3 la P4 (currDist = 5)
+        //totalPerim devine totalPerim + currDist
+        //calculez distanta de la P4 la P1 (currDist = 2)
+        //totalPerim devine totalPerim + currDist
+        //totalPerim este rezultatul
 
 
+        //folosim prev
 
+        //totatlPerim este initial 0
+        //initial prev este P4 (ultimul punct din array)
+        //calculez distanta de la prev la P1 (currDist)
+        //totalPerim devine totalPerim + currDist
+        //prev devine P1
+        //calculez distanta de la prev la P2 (currDist)
+        //totalPerim devine totalPerim + currDist
+        //prev devine P2
+        //calculez disnta de la prev la P3 (currDist)
+        //totalPerim devine totalPerim + currDist
+        //prev devine P3
+        //calculez distanta de la prev la P4 (currDist)
+        //totalPerim devine totalPerim + currDist
+        //prev devine P4
+        //totalPerim este rezultatul
 
-
-
-
-
-
-
+        //totatlPerim este initial 0
+        //initial prev este P4 (ultimul punct din array)
+        //pentru fiecare point[i] din array
+             //calculez distanta de la prev la point[i]
+             //totalPerim devine totalPerim + currDist
+             //prev devine point[i]
+        //totalPerim e rezultatul
 
     }
 
-    public static int getPerimeter (Shape shape){
-        return 0;
+    public static double getPerimeter2(Shape shape){
+        double totalPerim = 0;
+        Point[] points = shape.getPoints();
+        int numberOfPoints = shape.getNumberOfPoints();
+        Point prev = points[numberOfPoints-1];
+        for (int i = 0; i <numberOfPoints-1 ; i++) {
+            totalPerim += prev.distanceTo(points[i]);
+            prev = points[i];
+        }
+        return totalPerim;
+    }
+
+    public static double getPerimeter (Shape shape){
+        double totalPerim = 0;
+        Point[] points  = shape.getPoints();
+        int numberOfPoints = shape.getNumberOfPoints();
+        for (int i = 0; i < numberOfPoints-1; i++) {
+            double currDist = points[i].distanceTo(points[i+1]);
+            totalPerim = totalPerim + currDist;
+        }
+        totalPerim = totalPerim + points[numberOfPoints-1].distanceTo(points[0]);
+        return totalPerim;
     }
 }

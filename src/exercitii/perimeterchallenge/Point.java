@@ -26,7 +26,17 @@ public class Point {
         this.y = y;
     }
 
-    public double distanceTo(Point otherPoint){
-        return 0;
+    public double distanceTo (Point otherPt) {
+        int dx = x - otherPt.getX();
+        int dy = y - otherPt.getY();
+        return Math.sqrt(dx * dx + dy * dy);
     }
+
+    public static double distanceTo2 (Point p1, Point p2){
+        int dx = p1.getX() - p2.getX();
+        int dy = p1.getY() - p2.getY();
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+
+
 }

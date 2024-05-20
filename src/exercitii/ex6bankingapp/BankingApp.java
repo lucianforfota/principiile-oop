@@ -46,6 +46,7 @@ public  class BankingApp {
     //Clasa va avea doar metoda main(), unde se va instanția o persoană și se vor testa metodele pe care le poate face persoana (adăugare cont, deposit, etc.).
 
 
+
     public static void main(String[] args) {
         //instantiez persoane ca sa testez functionalitatile
 
