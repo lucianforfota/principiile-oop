@@ -42,13 +42,35 @@ public class Employee {
         return address;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", salary=" + salary +
+                ", address=" + address +
+                '}';
+    }
+
     public void setAddress(Address address) {
         this.address = address;
     }
 
-    public void printEmployeeAdressInfo(){
+    public void printEmployeeAdressInfo() { //8.3
         System.out.println(address.getStreet());
         System.out.println(address.getNumber());
         System.out.println(address.getCity());
     }
+
+    public void printEmployeeName() { //8.1
+        System.out.println(firstName + lastName);
+
+    }
+
+    public void printEmployeeAdressStreet() { //8.2
+        System.out.println(address.getStreet());
+
+    }
+
+
 }

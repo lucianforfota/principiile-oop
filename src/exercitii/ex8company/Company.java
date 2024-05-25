@@ -48,13 +48,46 @@ public class Company {
         this.numberOfDepartments = numberOfDepartments;
     }
 
-    @Override
-    public String toString() {
-        return "Company{" +
-                "name='" + name + '\'' +
-                ", yearFounded=" + yearFounded +
-                ", departments=" + Arrays.toString(departments) +
-                ", numberOfDepartments=" + numberOfDepartments +
-                '}';
+
+    public void printAllDepartments() { //8.10
+
+        for (int i = 0; i <= numberOfDepartments; i++) {
+            System.out.println(departments[i]);
+        }
     }
+
+    public void prinAllEmployeesByCompany() { //8.17
+        for (int i = 0; i < numberOfDepartments; i++) {
+            departments[i].printAllEmployeeByDepartment();
+        }
+    }
+
+    public Employee findEmployeeByNameInCompany(String lastName) { //merge doar pe primul departament     8.18
+        //parcurg fiecare departament
+        for (int i = 0; i < numberOfDepartments; i++) {
+
+            // creez o variabila de tip Employee si adaug in ea output-ul metodei findEmployeeByName aplicata pe departamentul de la pozitia i
+            Employee foundEmployee = departments[i].findEmployeeByName(lastName);
+
+            // adaug conditia ca daca mi-a gasit angajatul in departamentul curent, sa il returneze
+            if (foundEmployee != null) {
+
+                //returnez
+                return foundEmployee;
+            }
+            // caut in lista de angajati a departamentului curent angajatul cu numele lastName
+            /*Employee[] currentDepartmentEmployees = departments[i].getEmployees();
+            for (int j = 0; j < departments[i].getNumberOfEmployees(); j++) {
+                if (lastName.equals(currentDepartmentEmployees[j].getLastName())){
+                    return currentDepartmentEmployees[j];
+                }
+            }*/
+        }
+
+        return null;
+    }
+
+
 }
+
+
