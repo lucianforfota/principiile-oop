@@ -59,5 +59,12 @@ public  class BankingApp {
 
        s2.deposit(400);*/
 
+        Client client = new Client("Ionut", "Ionut");
+        try {
+            client.deposit(20, "ROBTRL435345");
+        }catch (OperationNotSupportedException e){
+            System.out.println(e.getMessage());
+        }
+
     }
 }

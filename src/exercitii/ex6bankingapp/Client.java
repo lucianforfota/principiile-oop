@@ -33,7 +33,7 @@ public class Client {
 
 
 
-    public void deposit (int amount, String accountNumber){
+    public void deposit (int amount, String accountNumber) throws OperationNotSupportedException{
         //caut contul cu numarul accountNumber in lista de conturi a clientului this
         //depun amount bani in acel cont (apelez deposit pe contul gasit)
 

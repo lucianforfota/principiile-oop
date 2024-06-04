@@ -1,5 +1,11 @@
 package exercitii.ex13socialnetwork;
 
+//adaug this in lista lui newFriend
+//        newFriend.getFriends()[newFriend.getNumberOfFriends()]=this;
+//        newFriend.setNumberOfFriends(newFriend.getNumberOfFriends()+1);
+
+import java.util.Arrays;
+
 public class User {
 
     private String name;
@@ -48,18 +54,47 @@ public class User {
         this.numberOfFriends = numberOfFriends;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name;
+    }
+
     public void addFriend (User newFriend){
         //adaug newFriend in lista lui this
+
         this.friends[numberOfFriends] = newFriend;
         this.numberOfFriends++;
 
         //adaug this in lista lui newFriend
-        newFriend.getFriends()[newFriend.getNumberOfFriends()]=this;
-        newFriend.setNumberOfFriends(newFriend.getNumberOfFriends()+1);
+        newFriend.friends[newFriend.numberOfFriends]=this;
+        newFriend.numberOfFriends++;
+
+
+
+//        newFriend.getFriends()[newFriend.getNumberOfFriends()] = this;
+//        newFriend.setNumberOfFriends(newFriend.getNumberOfFriends()+1);
     }
 
     public boolean isFriendSuggestion (User potentialFriend){ //TODO de facut
         //returnam true daca user-ul primit ca parametru are minim 3 interese la fel cu userul this (pe care se apeleaza metoda)
-        return true;
+        int counter=0;
+        //parcurg lista de interese a user-ului this
+        for(int i=0; i<this.interests.length; i++){
+            //parcurg lista de interese a user-ului potentialFriend
+            for(int j=0; j<potentialFriend.interests.length; j++){
+                //daca interesul curent din lista lui this este egal cu interesul din lista lui potentialFeind
+               if(this.interests[i].equals(potentialFriend.interests[j])){
+                   //numar inca un interes comun
+                   counter++;
+                   //daca am ajuns la 3 interese
+                   if(counter==3){
+                       //inseamna ca e sugestie
+                       return true;
+                   }
+               }
+            }
+        }
+        return false;
     }
 }
