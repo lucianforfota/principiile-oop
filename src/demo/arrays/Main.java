@@ -22,7 +22,7 @@ public class Main {
         itemsArrayList.add(new Item("sdfdsf","dsffds",14));
         itemsArrayList.add(new Item("sdfdsf","dsffds",14));
 
-        System.out.println(itemsArrayList.get(0));
+       System.out.println(itemsArrayList.get(0));
 
 
         itemsArrayList.remove(1);

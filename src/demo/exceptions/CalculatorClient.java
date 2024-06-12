@@ -25,7 +25,7 @@ public class CalculatorClient {
         } catch (ArithmeticException e){
             System.out.println(e.getMessage());
         }
-        System.out.println("programul continua");
+
 
     }
 }
