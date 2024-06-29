@@ -1,7 +1,5 @@
 package exercitii.ex8company;
 
-import java.util.Arrays;
-
 public class Company {
 
     private String name;

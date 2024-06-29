@@ -1,7 +1,5 @@
 package exercitii.ex6bankingapp;
 
-import exercitii.ex3animalshelter.Animal;
-
 public class Client {
 
     private String firstName;

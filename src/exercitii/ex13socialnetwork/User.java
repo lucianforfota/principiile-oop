@@ -4,8 +4,6 @@ package exercitii.ex13socialnetwork;
 //        newFriend.getFriends()[newFriend.getNumberOfFriends()]=this;
 //        newFriend.setNumberOfFriends(newFriend.getNumberOfFriends()+1);
 
-import java.util.Arrays;
-
 public class User {
 
     private String name;
